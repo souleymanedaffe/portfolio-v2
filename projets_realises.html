@@ -20,12 +20,27 @@
     </nav>
   </header>
   <main>
-    <section class="project">
-      <h2>Développement d'application carbone</h2>
-      <p><strong>Contexte :</strong> Outil Revit pour estimer l’empreinte carbone de projets architecturaux dès les phases préliminaires.</p>
-      <p><strong>Tâches effectuées :</strong> Développement d'une app sur Revit (Python/C#), génération automatique de l'empreinte carbone, visualisation avec Dash & PowerBI, aide à la décision.</p>
-      <p><strong>Outils :</strong> Python, Revit, C#, Dash, PowerBI</p>
-    </section>
+
+  <section class="project">
+  <h2>Développement d'une application carbone</h2>
+  <p>
+    <strong>Contexte :</strong> Développement d’un outil innovant dans Revit pour estimer l’empreinte carbone des projets architecturaux dès les phases d’études préliminaires et d’avant-projet.  
+    Cet outil permet de calculer une estimation globale du bilan carbone à partir des données disponibles dans le modèle Revit.  
+    Il aide les décideurs à comprendre rapidement l’impact environnemental potentiel de leurs constructions et à prendre des décisions plus durables.
+  </p>
+
+  <p>
+    L’outil <strong>BIM&Carbone</strong> a été conçu pour être facilement intégrable et simple d’utilisation. Il permet également de générer des rapports automatisés ainsi que des vues 3D colorées pour visualiser l’impact carbone de chaque composant du bâtiment.  
+    j'ai  joué un rôle clé dans son développement, notamment dans la programmation en Python et l’intégration technique avec Revit, sous la supervision de <strong>Mohamed ASLI</strong> et <strong>Joaquin GINER</strong>.  
+    Grâce à sa contribution, l’outil sera déployé chez AREP à l’été 2025.
+  </p>
+
+  <p><strong>Tâches effectuées :</strong> Développement d’une application sur Revit (Python/C#), génération automatique du calcul d’empreinte carbone, visualisation interactive avec Dash & Power BI, assistance à la prise de décision écologique.</p>
+
+  <p><strong>Outils :</strong> Python, Revit, C#, Dash, Power BI</p>
+</section>
+
+  
 
     <section class="project">
       <h2>Prévision de la consommation d’énergie électrique</h2>
@@ -68,19 +83,45 @@
 
 
 
-    <section class="project">
-      <h2>Assistant IA Jeux Olympiques 2024</h2>
-      <p><strong>Contexte :</strong> Chatbot prédictif basé sur prompts IA pour répondre à toutes les questions sportives et JO 2024.</p>
-      <p><strong>Tâches effectuées :</strong> Rédaction de prompts spécialisés, appel d'API OpenAI, interface avec Streamlit.</p>
-      <p><strong>Outils :</strong> Python, OpenAI API, Streamlit</p>
-    </section>
+  <section class="project">
+  <h2>Assistant IA – Jeux Olympiques 2024</h2>
 
-    <section class="project">
-      <h2>Extraction de données depuis des documents PDF</h2>
-      <p><strong>Contexte :</strong> Analyse automatique de documents PDF (textes + OCR), extraction et structuration de données RSE.</p>
-      <p><strong>Tâches effectuées :</strong> OCR avec pytesseract, extraction avec pdfplumber, découpage pour GPT, agrégation de réponses, génération CSV.</p>
-      <p><strong>Outils :</strong> Python, pdfplumber, pytesseract, OpenAI API, CSV, json</p>
-    </section>
+  <p><strong>Contexte :</strong>  
+  Développement d’un chatbot prédictif basé sur l’IA pour répondre à toutes les questions liées aux Jeux Olympiques de Paris 2024, notamment les classements, les performances des athlètes, et les prévisions de médailles.</p>
+
+  <p><strong>Tâches effectuées :</strong>  
+  J’ai conçu et testé plusieurs prompts spécialisés afin d’adapter les réponses du chatbot selon le contexte :  
+  <ul>
+    <li><code>JO_PROMPT</code> : Fournit les informations officielles sur le classement des JO 2024.</li>
+    <li><code>JO_PROMPT2</code> : Présente les performances remarquables et les médaillés marquants des JO.</li>
+    <li><code>JO_PROMPT3</code> : Prompt destiné à un assistant expert en sport. Il analyse les chances de médailles d’un pays ou d’un athlète en se basant sur les résultats précédents, les classements mondiaux, et les tendances observées, sans jamais donner de certitudes.</li>
+  </ul>
+  Ce système de prompts permet une réponse contextuelle, fiable et nuancée selon le type de requête utilisateur.</p>
+
+  <p><strong>Outils :</strong> Python, OpenAI API, Streamlit</p>
+</section>
+
+
+  <section class="project">
+  <h2>Extraction de données depuis des documents PDF</h2>
+
+  <p><strong>Contexte :</strong>  
+  L’objectif était de collecter des données à partir de documents PDF (avec ou sans couche texte), d’extraire automatiquement des informations clés et de les structurer dans un fichier CSV contenant les colonnes suivantes :  
+  <code>"enterprise_name", "raison_d_etre", "objectifs_sociaux", "objectifs_environnementaux", "mission_nature"</code>.  
+  Le projet s’appuie sur des techniques d’OCR, de traitement de texte et d’intelligence artificielle (modèle OpenAI GPT).</p>
+
+  <p><strong>Tâches effectuées :</strong>  
+    - Identification des PDF contenant une couche texte ou non à l’aide de <code>pdfplumber</code> ;<br>
+    - Utilisation de <code>pdfplumber</code> pour les PDF textuels, et de <code>pytesseract</code> pour l’OCR des PDF scannés ;<br>
+    - Développement d’une fonction de découpage du texte en fragments pour respecter les limites de tokens des modèles IA ;<br>
+    - Création d’un système de requêtes structurées vers le modèle GPT pour extraire des informations spécifiques (nom d’entreprise, raison d’être, missions RSE, etc.) ;<br>
+    - Implémentation d’une logique d’agrégation des résultats issus de plusieurs pages (chunks) ;<br>
+    - Traitement automatisé d’un dossier complet de PDF, avec sauvegarde des résultats dans un fichier CSV ;<br>
+    - Gestion des erreurs, vérification des réponses de l’API, gestion des cas d’échec avec fallback JSON sécurisé.</p>
+
+  <p><strong>Outils :</strong> Python, pdfplumber, pytesseract, OpenAI API, CSV, JSON</p>
+</section>
+
     
     <section class="project">
     <h2>Calcul de la performance commerciale, analyse de données et visualisation avec Power BI</h2>
