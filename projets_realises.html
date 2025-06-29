@@ -34,12 +34,39 @@
       <p><strong>Outils :</strong> Python, ARIMA, SARIMA, SARIMAX, matplotlib, seaborn, statsmodels</p>
     </section>
 
+
     <section class="project">
-      <h2>Détection de fake news via Deep Learning</h2>
-      <p><strong>Contexte :</strong> Lutte contre la désinformation via les réseaux sociaux sur la santé des dirigeants.</p>
-      <p><strong>Tâches effectuées :</strong> Collecte de données (Facebook, Twitter...), traitement CSV, NLP, entraînement de modèles pour détection automatique de fausses nouvelles.</p>
-      <p><strong>Outils :</strong> Python, stopwords, Logistic Regression, Random Forest, matplotlib, seaborn</p>
-    </section>
+  <h2>Détection de fake news via Deep Learning</h2>
+  <p><strong>Contexte :</strong> Lutte contre la désinformation diffusée sur les réseaux sociaux, notamment concernant la santé des dirigeants.</p>
+
+  <p><strong>Tâches effectuées :</strong> Collecte de données (Facebook, Twitter, etc.), traitement en CSV, NLP, entraînement de modèles pour la détection automatique de fausses nouvelles.</p>
+
+  <p>Pour ce projet, j’ai choisi de m’appuyer sur l’intelligence artificielle (IA), qui offre une solution prometteuse pour automatiser la détection des fake news. En utilisant des techniques avancées de traitement du langage naturel (NLP), j’ai récolté des données à partir de diverses sources telles que Facebook, Google, Twitter, la presse et YouTube.</p>
+
+  <p>Par exemple, j’ai récupéré toutes les vidéos évoquant les fausses nouvelles sur la santé du président. Je me suis concentré sur les commentaires trouvés sur Google, j’ai collecté des tweets liés à ce sujet sur Twitter, rassemblé des articles de presse, et analysé les publications et commentaires sur Facebook.</p>
+
+  <p>J’ai ensuite structuré mes données dans un fichier CSV comportant quatre colonnes :
+    <ul>
+      <li><strong>sources :</strong> origine des données (site web ou plateforme sociale),</li>
+      <li><strong>commentaire :</strong> texte de la nouvelle ou du commentaire,</li>
+      <li><strong>malade :</strong> identification du sujet (ici, la santé du président),</li>
+      <li><strong>auteur :</strong> nom ou identifiant de l’auteur du contenu.</li>
+    </ul>
+  </p>
+
+  <p>Après avoir préparé ces fichiers CSV, j’ai utilisé la bibliothèque Pandas en Python pour les concaténer en un seul fichier. Grâce à la fonction <code>concat()</code>, j’ai pu fusionner toutes les données en un fichier consolidé prêt à l’analyse.</p>
+
+  <p>Ce fichier unique contient l’ensemble des données structurées. La colonne "sources" permet de retracer l’origine de chaque entrée, "commentaire" fournit le contenu textuel, "malade" permet d’identifier les fausses nouvelles liées à la santé, et "auteur" indique l’origine du contenu.</p>
+
+  <p>Ce processus de collecte et de structuration des données est essentiel pour entraîner un système d’IA performant. Il facilite l’analyse des tendances, la détection des motifs récurrents dans les fausses nouvelles, et l’identification de sources peu fiables.</p>
+
+  <p>En résumé, j’ai pris en charge l’intégralité de la collecte et de l’organisation des données, créant ainsi une base robuste pour mon projet de détection de fake news.</p>
+
+  <p><strong>Outils :</strong> Python, stopwords, Logistic Regression, Random Forest, Matplotlib, Seaborn</p>
+</section>
+
+
+
 
     <section class="project">
       <h2>Assistant IA Jeux Olympiques 2024</h2>
