@@ -71,7 +71,6 @@ nav a:hover {
 nav a:hover::after {
   width: 100%;
 }
-
 form {
   background-color: #fff;
   padding: 20px;
