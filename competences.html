@@ -84,21 +84,24 @@
     <p>Souleymane Daffe  DATA SCIENTIS/ANALYST/DEV IA</p>
   </footer>
 
-  <script>
-  const fadeElements = document.querySelectorAll('.fade-scroll');
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll(".fade-scroll");
 
-  const onScroll = () => {
-    fadeElements.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        el.classList.add('visible');
-      }
-    });
-  };
+    const onScroll = () => {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100 && !el.classList.contains("visible")) {
+          el.classList.add("visible");
+        }
+      });
+    };
 
-  window.addEventListener('scroll', onScroll);
-  window.addEventListener('load', onScroll);
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // appel initial
+  });
 </script>
+
 
 </body>
 </html>
