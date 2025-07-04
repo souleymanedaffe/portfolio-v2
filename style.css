@@ -244,10 +244,20 @@ footer {
   padding: 25px;
   margin-bottom: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Appliquer l’animation uniquement si nécessaire */
+.fade-scroll {
   opacity: 0;
   transform: translateY(40px);
+  transition: all 0.8s ease;
 }
+
+.fade-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Effet de cascade : chaque projet apparaît avec un petit délai */
 .project:nth-child(1) { animation-delay: 0.2s; }
