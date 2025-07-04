@@ -319,6 +319,68 @@ footer {
   }
 }
 
+/* Structure globale */
+.MOI {
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;
+}
+
+.MOI h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Mise en page du contenu */
+.moi-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Texte */
+.moi-texte {
+  flex: 1;
+  min-width: 280px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Image (au cas où tu veux la remettre dans cette section aussi) */
+.moi-photo {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Listes */
+.moi-texte ul {
+  padding-left: 1.2rem;
+  margin: 1rem 0;
+}
+
+.moi-texte li {
+  margin-bottom: 0.8rem;
+}
+
+/* Responsive pour petits écrans */
+@media screen and (max-width: 768px) {
+  .moi-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .moi-photo {
+    margin-top: 1rem;
+  }
+}
+
 
 
 
