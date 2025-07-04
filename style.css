@@ -263,5 +263,35 @@ footer {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
+.moi-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.moi-photo {
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.moi-texte {
+  flex: 1;
+  min-width: 250px;
+}
+@media screen and (max-width: 600px) {
+  .moi-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .moi-photo {
+    max-width: 100%;
+  }
+}
 
 
