@@ -454,4 +454,88 @@ footer {
 }
 
 
+/* ===== COMPÉTENCES : STYLE & ANIMATION ===== */
+.competences {
+  background: #fefefe;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.9s ease-out;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.competences h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.competences p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.competences strong {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #1a237e;
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.competences .sous-titre {
+  font-weight: 600;
+  color: #37474f;
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .competences {
+    padding: 1.5rem;
+  }
+
+  .competences h2 {
+    font-size: 1.7rem;
+  }
+
+  .competences p {
+    font-size: 0.95rem;
+  }
+}
+.competences i {
+  color: #1a237e;
+  margin-right: 6px;
+}
+
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
