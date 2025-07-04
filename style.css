@@ -283,15 +283,5 @@ footer {
   flex: 1;
   min-width: 250px;
 }
-@media screen and (max-width: 600px) {
-  .moi-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .moi-photo {
-    max-width: 100%;
-  }
-}
 
 
