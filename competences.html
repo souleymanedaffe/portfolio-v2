@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projets Réalisés</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDNMV1EVS3"></script>
@@ -32,53 +34,71 @@
   </header>
   <main>
 
-<section class="project">
-  <h2>Compétences techniques</h2>
+<section class="competences fade-scroll">
+  <h2><i class="fas fa-code"></i> Compétences techniques</h2>
 
-  <p><strong>Langages de programmation :</strong> Python, R, SQL (avancé), NoSQL, Java, C, C++, C#, UML, VBA</p>
+  <p><strong><i class="fas fa-terminal"></i> Langages de programmation :</strong> Python, R, SQL (avancé), NoSQL, Java, C, C++, C#, UML, VBA</p>
 
-  <p><strong>Analyse & Data Science :</strong> 
-    Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Transformers, R Shiny, Dash, Streamlit, SAS, Excel Avancé, dashboard Formspree, Microsoft Power BI, Microsoft SQL Server, Google Analytics
+  <p><strong><i class="fas fa-chart-line"></i> Analyse & Data Science :</strong> 
+    Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Transformers, R Shiny, Dash, Streamlit, SAS, Excel Avancé, dashboard Formspree, Power BI, SQL Server, Google Analytics
   </p>
 
-  <p><strong>Machine Learning & IA :</strong>
-    Apprentissage supervisé, non supervisé, par renforcement, par transfert, Deep Learning, NLP, BERT, GPT, LLM, évaluation (précision, F1-score, ROC, validation croisée), sélection de modèles, algorithmes avancés,<br>
-    <u>Régression :</u> Régression linéaire, Régression polynomiale, Régression Ridge, Lasso, ElasticNet<br>
-    <u>Classification :</u> k-Nearest Neighbors (k-NN), Support Vector Machines (SVM), Naive Bayes, Logistic Regression, Decision Trees, Random Forest, Gradient Boosting Machines (XGBoost, LightGBM, CatBoost)
+  <p><strong><i class="fas fa-brain"></i> Machine Learning & IA :</strong>
+    Apprentissage supervisé, non supervisé, par renforcement, par transfert, Deep Learning, NLP, BERT, GPT, LLM, évaluation (précision, F1-score, ROC, validation croisée), sélection de modèles, algorithmes avancés<br>
+    <span class="sous-titre">Régression :</span> Régression linéaire, polynomiale, Ridge, Lasso, ElasticNet<br>
+    <span class="sous-titre">Classification :</span> k-NN, SVM, Naive Bayes, Logistic Regression, Decision Trees, Random Forest, XGBoost, LightGBM, CatBoost
   </p>
 
-  <p><strong>Base de données & Big Data :</strong>
+  <p><strong><i class="fas fa-database"></i> Base de données & Big Data :</strong>
     MySQL, NoSQL (avancé), Hive, Hadoop, Pig, requêtes SQL avancées, data mining
   </p>
 
-  <p><strong>Outils BI & Visualisation :</strong>
-    Power BI, Tableau Software, QlikView, Dash, Streamlit, création de dashboards interactifs
+  <p><strong><i class="fas fa-chart-pie"></i> Outils BI & Visualisation :</strong>
+    Power BI, Tableau, QlikView, Dash, Streamlit, création de dashboards interactifs
   </p>
 
-  <p><strong>Programmation et développement :</strong>
-    Développement de packages R, déploiement de modèles avec Dash, scrapping de données (BeautifulSoup), GitHub, GitLab, automatisation Excel/VBA
+  <p><strong><i class="fas fa-code-branch"></i> Programmation & Développement :</strong>
+    Packages R, déploiement Dash, scrapping (BeautifulSoup), GitHub, GitLab, Excel/VBA
   </p>
 
-  <p><strong>Mathématiques appliquées :</strong>
-    Statistiques, régression, optimisation, lois de probabilité, tests statistiques (Chi², ANOVA, etc.), théorie des graphes, fondements mathématiques de la science des données
+  <p><strong><i class="fas fa-square-root-alt"></i> Mathématiques appliquées :</strong>
+    Statistiques, régression, optimisation, probabilités, ANOVA, théorie des graphes
   </p>
 
-  <p><strong>Informatique et systèmes :</strong>
-    Systèmes d’exploitation, réseaux et télécommunications, cybersécurité, informatique décisionnelle, IoT (Internet des objets)
+  <p><strong><i class="fas fa-network-wired"></i> Informatique & Systèmes :</strong>
+    OS, réseaux, cybersécurité, décisionnel, IoT (Internet des objets)
   </p>
 
-  <p><strong>Soft Skills & Management :</strong>
-    Esprit analytique, sélection de modèles pertinents pour un projet, marketing stratégique, business model, droit de la propriété intellectuelle, management stratégique
+  <p><strong><i class="fas fa-lightbulb"></i> Soft Skills & Management :</strong>
+    Esprit analytique, sélection de modèles, marketing stratégique, droit, management
   </p>
 
-  <p><strong>Projets & certifications :</strong>
-    Projet Data Science (Python, R ou SAS), certification Machine Learning, déploiement de solutions analytiques en production
+  <p><strong><i class="fas fa-certificate"></i> Projets & Certifications :</strong>
+    Projet Data Science (Python, R ou SAS), certification ML, déploiement en production
   </p>
 </section>
+
 
     </main>
   <footer>
     <p>Souleymane Daffe  DATA SCIENTIS/ANALYST/DEV IA</p>
   </footer>
+
+  <script>
+  const fadeElements = document.querySelectorAll('.fade-scroll');
+
+  const onScroll = () => {
+    fadeElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('load', onScroll);
+</script>
+
 </body>
 </html>
