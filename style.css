@@ -284,4 +284,17 @@ footer {
   min-width: 250px;
 }
 
+@media screen and (max-width: 768px) {
+  .moi-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .moi-photo {
+    margin-top: 20px;
+  }
+}
+
+
 
