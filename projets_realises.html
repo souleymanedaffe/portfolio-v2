@@ -166,6 +166,28 @@
     <p><strong>Outils :</strong> Power BI, DAX, Power Query, mesures, colonnes calculées, Excel</p>
   </section>
 
+    <section class="project">
+  <h2>Scraping de données web et traitement analytique</h2>
+  
+  <p><strong>Contexte :</strong> 
+    Ce projet s’inscrit dans une démarche d’apprentissage du traitement et de l’analyse de données.  
+    Il consistait à extraire des informations librement accessibles sur Internet, notamment depuis Wikipedia.  
+    Le sujet portait sur une liste de pays avec des indicateurs comme la population et la superficie, disponibles sous forme de tableaux HTML.  
+    L’objectif était de transformer ces données brutes en un jeu de données structuré, exploitable pour l’analyse et la visualisation.  
+    Ce projet a permis de développer des compétences en web scraping, manipulation de données et visualisation avec Python.
+  </p>
+  
+  <p><strong>Tâches effectuées :</strong> 
+    J’ai identifié une page Wikipedia contenant des données sur les pays (population, superficie, etc.).  
+    À l’aide de l’inspecteur HTML, j’ai localisé les balises <code>&lt;table&gt;</code> pertinentes, puis utilisé la bibliothèque <code>requests</code> pour récupérer le contenu.  
+    Ensuite, j’ai extrait les données ciblées à l’aide de <code>BeautifulSoup</code>, nettoyé les formats, supprimé les balises HTML inutiles, et converti les types de données.  
+    Les informations ont été structurées dans un <code>DataFrame</code> avec <code>pandas</code>, analysées selon différents critères, puis visualisées via des graphiques.  
+    Enfin, le jeu de données a été exporté au format CSV.
+  </p>
+
+  <p><strong>Outils :</strong> Python, requests, BeautifulSoup, pandas, matplotlib, seaborn (utilisés dans un Jupyter Notebook).</p>
+</section>
+
   </main>
   <footer>
     <p>Souleymane Daffe  DATA SCIENTIS/ANALYST/DEV IA</p>
