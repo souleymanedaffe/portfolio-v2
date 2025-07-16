@@ -190,6 +190,126 @@
   <p><strong>Outils :</strong> Python, requests, BeautifulSoup, pandas, matplotlib, seaborn (utilisés dans un Jupyter Notebook).</p>
 </section>
 
+      <section class="project">
+  <h2>Analyse des Risques d'Obésité dans les Populations du Mexique, du Pérou et de la Colombie : Application de l'Intelligence Artificielle aux Habitudes Alimentaires et à la Condition Physique</h2>
+  
+  <p><strong>Contexte :</strong><br>
+    L’obésité est un enjeu de santé publique croissant en Amérique latine, notamment au Mexique, au Pérou et en Colombie. Ce projet vise à analyser les facteurs de risque (alimentation, activité physique, habitudes de vie) liés à l’obésité dans ces pays, en utilisant des techniques d’intelligence artificielle.<br>
+    Les données collectées concernent 2111 individus avec 18 variables (9 qualitatives, 8 quantitatives et 1 calculée : l’IMC). La variable cible est <em>"NObeyesdad"</em>, qui catégorise 7 niveaux d’obésité.<br><br>
+    <strong>Objectifs :</strong>
+    <ul>
+      <li>Prédire les niveaux d’obésité à l’aide de modèles de machine learning.</li>
+      <li>Identifier les facteurs influents pour fournir des recommandations de santé publique adaptées à chaque pays.</li>
+    </ul>
+  </p>
+  
+  <p><strong>Tâches effectuées :</strong></p>
+  <ol>
+    <li><strong>Compréhension & Préparation des Données</strong>
+      <ul>
+        <li>Analyse des variables qualitatives et quantitatives</li>
+        <li>Ajout de l’IMC (poids / taille²)</li>
+        <li>Détection des valeurs manquantes et aberrantes</li>
+        <li>Recodage des variables numériques décimales (FCVC, NCP, CH2O, FAF, TUE)</li>
+        <li>Encodage des variables catégorielles avec <code>LabelEncoder()</code></li>
+      </ul>
+    </li>
+    <li><strong>Nettoyage et Structuration</strong>
+      <ul>
+        <li>Suppression de variables non pertinentes : <em>TUE, CALC, CH2O, SMOKE, Gender</em></li>
+        <li>Création de plusieurs DataFrames : <em>obese, obesecluster, obesecluster_array, attributs_data, target_data</em></li>
+      </ul>
+    </li>
+    <li><strong>Analyse exploratoire</strong>
+      <ul>
+        <li>Matrice de corrélation pour étudier les relations entre les variables</li>
+        <li>Identification des variables influentes dans la prédiction de l’obésité</li>
+      </ul>
+    </li>
+    <li><strong>Apprentissage non supervisé</strong>
+      <ul>
+        <li>Clustering K-Means avec 7 puis 5 clusters</li>
+        <li>Réduction de dimension (PCA) pour visualisation 2D</li>
+      </ul>
+    </li>
+    <li><strong>Apprentissage supervisé</strong>
+      <p>Modèles utilisés :</p>
+      <ul>
+        <li>DecisionTreeClassifier (Accuracy ≈ 96%)</li>
+        <li>DecisionTreeRegressor (≈ 96.5%)</li>
+        <li>Gaussian Naive Bayes (≈ 83.7%)</li>
+        <li>Régression Logistique (≈ 96.7%)</li>
+        <li>Support Vector Machine (SVM) (≈ 96.06%)</li>
+        <li>K-Nearest Neighbors (KNN) (≈ 92.27%)</li>
+      </ul>
+      <p>Évaluation des modèles :</p>
+      <ul>
+        <li>Accuracy, Précision, Rappel, F1-Score</li>
+        <li>Matrices de confusion, courbes ROC</li>
+        <li>Erreurs : absolue, quadratique (EQ), EQM</li>
+      </ul>
+    </li>
+    <li><strong>Sélection du modèle optimal</strong>
+      <ul>
+        <li>Modèles les plus performants : Régression logistique, DecisionTreeRegressor, SVM</li>
+      </ul>
+    </li>
+    <li><strong>Règles de classification interprétables</strong>
+      <ul>
+        <li>Création de règles simples basées sur l’IMC, la taille, le poids, les antécédents familiaux, etc.</li>
+      </ul>
+    </li>
+    <li><strong>Évaluation financière (étude complémentaire)</strong>
+      <ul>
+        <li>Analyse coût-bénéfice des politiques publiques de prévention</li>
+        <li>Évaluation du retour sur investissement (ROI), bénéfices économiques et sociaux</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><strong>Outils :</strong></p>
+  <ul>
+    <li><strong>Langage :</strong> Python</li>
+    <li><strong>Bibliothèques principales :</strong>
+      <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Bibliothèque</th>
+            <th>Utilité principale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>pandas</code></td>
+            <td>Manipulation et structuration des données</td>
+          </tr>
+          <tr>
+            <td><code>numpy</code></td>
+            <td>Calculs numériques</td>
+          </tr>
+          <tr>
+            <td><code>matplotlib</code>, <code>seaborn</code></td>
+            <td>Visualisation de données et des courbes de ROC</td>
+          </tr>
+          <tr>
+            <td><code>scikit-learn (sklearn)</code></td>
+            <td>Modélisation : DecisionTree, SVM, kNN, LogisticRegression, etc.</td>
+          </tr>
+          <tr>
+            <td><code>LabelEncoder</code></td>
+            <td>Encodage des variables catégorielles</td>
+          </tr>
+          <tr>
+            <td><code>KMeans</code>, <code>PCA</code></td>
+            <td>Clustering et réduction de dimensions</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+</section>
+
+
   </main>
   <footer>
     <p>Souleymane Daffe  DATA SCIENTIS/ANALYST/DEV IA</p>
