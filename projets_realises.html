@@ -56,6 +56,122 @@
 
   <p><strong>Outils :</strong> Python, ARIMA, SARIMA, SARIMAX, matplotlib, seaborn, statsmodels</p>
 </section>
+
+  <section class="project">
+  <h2>Prédiction du Prix des Appartements avec le Machine Learning</h2>
+
+  <p><strong>Contexte :</strong><br>
+    Le marché immobilier est influencé par divers facteurs tels que la localisation, la surface, le nombre de pièces, ou encore l'année de construction. Afin d’aider les agences immobilières, les particuliers ou les investisseurs à estimer la valeur d’un bien, ce projet a pour objectif de créer un modèle prédictif fiable du prix d’un appartement en se basant sur ses caractéristiques.
+  </p>
+
+  <p><strong>Tâches effectuées :</strong></p>
+  <ol>
+    <li><strong>Collecte de données</strong><br>
+      Utilisation d’un dataset public provenant de Kaggle, contenant des informations sur des appartements (surface, nombre de pièces, localisation, année de construction, etc.) et leur prix.  
+      <br>Le choix s’est porté sur une source structurée pour se concentrer sur l’aspect modélisation plutôt que sur le scraping.
+    </li>
+
+    <li><strong>Exploration et Prétraitement des Données</strong>
+      <ul>
+        <li>🔍 <strong>Analyse exploratoire (EDA)</strong> : statistiques descriptives, histogrammes, boxplots, heatmaps de corrélation.</li>
+        <li>🧹 <strong>Nettoyage</strong> : suppression/imputation des valeurs manquantes, élimination des doublons, vérification de la cohérence des données.</li>
+        <li>🔧 <strong>Transformation</strong> :
+          <ul>
+            <li>Encodage des variables catégorielles (OneHotEncoder)</li>
+            <li>Standardisation/normalisation des variables numériques</li>
+            <li>Création de variables dérivées comme le prix au m² et l’âge du bâtiment</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><strong>Modélisation avec le Machine Learning</strong>
+      <ul>
+        <li><strong>Séparation des données</strong> : 80 % pour l'entraînement, 20 % pour le test.</li>
+        <li><strong>Entraînement de plusieurs modèles</strong> :
+          <ul>
+            <li>Régression linéaire</li>
+            <li>K-Nearest Neighbors (KNN)</li>
+            <li>Random Forest Regressor</li>
+            <li>Gradient Boosting (XGBoost, LightGBM)</li>
+          </ul>
+        </li>
+        <li><strong>Évaluation</strong> des modèles via :
+          <ul>
+            <li>MAE (Mean Absolute Error)</li>
+            <li>RMSE (Root Mean Squared Error)</li>
+            <li>R² (coefficient de détermination)</li>
+            <li>Graphes : prédictions vs valeurs réelles</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><strong>Optimisation des Modèles</strong>
+      <ul>
+        <li>Recherche d’hyperparamètres (GridSearchCV, RandomizedSearchCV)</li>
+        <li>Sélection des variables les plus importantes (feature selection)</li>
+      </ul>
+    </li>
+
+    <li><strong>Visualisation et Interprétation</strong>
+      <ul>
+        <li>Heatmap de corrélation</li>
+        <li>Importance des variables dans Random Forest et XGBoost</li>
+        <li>Courbes d’apprentissage pour détecter overfitting/sous-apprentissage</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><strong>Outils & Bibliothèques :</strong></p>
+  <ul>
+    <li><strong>Langage :</strong> Python 3.x</li>
+    <li><strong>Analyse de données :</strong>
+      <ul>
+        <li><code>pandas</code></li>
+        <li><code>numpy</code></li>
+      </ul>
+    </li>
+    <li><strong>Visualisation :</strong>
+      <ul>
+        <li><code>matplotlib</code></li>
+        <li><code>seaborn</code></li>
+        <li><code>plotly</code> (optionnel, pour les graphiques interactifs)</li>
+      </ul>
+    </li>
+    <li><strong>Machine Learning :</strong>
+      <ul>
+        <li><code>scikit-learn</code> : régression, KNN, Random Forest, métriques</li>
+        <li><code>xgboost</code> ou <code>lightgbm</code> : gradient boosting</li>
+      </ul>
+    </li>
+    <li><strong>Optimisation :</strong>
+      <ul>
+        <li><code>sklearn.model_selection</code> : <code>train_test_split</code>, <code>GridSearchCV</code>, <code>RandomizedSearchCV</code></li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+  <section class="project">
+  <h2>Développement d'une application carbone</h2>
+  <p>
+    <strong>Contexte :</strong> Développement d’un outil innovant dans Revit pour estimer l’empreinte carbone des projets architecturaux dès les phases d’études préliminaires et d’avant-projet.  
+    Cet outil permet de calculer une estimation globale du bilan carbone à partir des données disponibles dans le modèle Revit.  
+    Il aide les décideurs à comprendre rapidement l’impact environnemental potentiel de leurs constructions et à prendre des décisions plus durables.
+  </p>
+
+  <p>
+    L’outil a été conçu pour être facilement intégrable et simple d’utilisation. Il permet également de générer des rapports automatisés ainsi que des vues 3D colorées pour visualiser l’impact carbone de chaque composant du bâtiment.  
+    j'ai  joué un rôle clé dans son développement, notamment dans la programmation en Python et l’intégration technique avec Revit.  
+    Grâce à ma contribution, l’outil sera déployé chez AREP à l’été 2025.
+  </p>
+
+  <p><strong>Tâches effectuées :</strong> Développement d’une application sur Revit (Python/C#), génération automatique du calcul d’empreinte carbone, visualisation interactive avec Dash & Power BI, assistance à la prise de décision écologique.</p>
+
+  <p><strong>Outils :</strong> Python, Revit, C#, Dash, Power BI, Git, GitHub.</p>
+
+</section>
   
     <section class="project">
     <h2>Calcul de la performance commerciale, analyse de données et visualisation avec Power BI</h2>
@@ -285,27 +401,6 @@
 </section>
 
 
-
-
-  <section class="project">
-  <h2>Développement d'une application carbone</h2>
-  <p>
-    <strong>Contexte :</strong> Développement d’un outil innovant dans Revit pour estimer l’empreinte carbone des projets architecturaux dès les phases d’études préliminaires et d’avant-projet.  
-    Cet outil permet de calculer une estimation globale du bilan carbone à partir des données disponibles dans le modèle Revit.  
-    Il aide les décideurs à comprendre rapidement l’impact environnemental potentiel de leurs constructions et à prendre des décisions plus durables.
-  </p>
-
-  <p>
-    L’outil a été conçu pour être facilement intégrable et simple d’utilisation. Il permet également de générer des rapports automatisés ainsi que des vues 3D colorées pour visualiser l’impact carbone de chaque composant du bâtiment.  
-    j'ai  joué un rôle clé dans son développement, notamment dans la programmation en Python et l’intégration technique avec Revit.  
-    Grâce à ma contribution, l’outil sera déployé chez AREP à l’été 2025.
-  </p>
-
-  <p><strong>Tâches effectuées :</strong> Développement d’une application sur Revit (Python/C#), génération automatique du calcul d’empreinte carbone, visualisation interactive avec Dash & Power BI, assistance à la prise de décision écologique.</p>
-
-  <p><strong>Outils :</strong> Python, Revit, C#, Dash, Power BI, Git, GitHub.</p>
-
-</section>
 
 
   </main>
