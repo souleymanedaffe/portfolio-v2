@@ -33,6 +33,7 @@
   </header>
   <main>
 
+ <h1>Projets Réalisés en Entreprise et en Milieu Académique</h1>
 
  <section class="project">
   <h2>Prévision de la consommation d’énergie électrique</h2>
@@ -57,29 +58,31 @@
   <p><strong>Outils :</strong> Python, ARIMA, SARIMA, SARIMAX, matplotlib, seaborn, statsmodels</p>
 </section>
 
-  <section class="project">
+ <section class="project">
   <h2>Prédiction du Prix des Appartements avec le Machine Learning</h2>
 
   <p><strong>Contexte :</strong><br>
-    Le marché immobilier est influencé par divers facteurs tels que la localisation, la surface, le nombre de pièces, ou encore l'année de construction. Afin d’aider les agences immobilières, les particuliers ou les investisseurs à estimer la valeur d’un bien, ce projet a pour objectif de créer un modèle prédictif fiable du prix d’un appartement en se basant sur ses caractéristiques.
+    Le marché immobilier est influencé par de nombreux facteurs tels que la localisation, la surface habitable, le nombre de pièces ou encore l'année de construction.  
+    Dans ce projet, j’ai cherché à créer un modèle prédictif fiable du prix de vente d’un appartement en me basant sur ses caractéristiques principales.  
+    L’objectif est d’aider les agences, les particuliers ou les investisseurs à estimer plus justement la valeur d’un bien.
   </p>
 
   <p><strong>Tâches effectuées :</strong></p>
   <ol>
     <li><strong>Collecte de données</strong><br>
-      Utilisation d’un dataset public provenant de Kaggle, contenant des informations sur des appartements (surface, nombre de pièces, localisation, année de construction, etc.) et leur prix.  
-      <br>Le choix s’est porté sur une source structurée pour se concentrer sur l’aspect modélisation plutôt que sur le scraping.
+      J’ai utilisé un dataset public provenant de la plateforme Kaggle. Il contient des informations détaillées sur des appartements : surface, nombre de pièces, localisation, année de construction, ainsi que le prix de vente.  
+      J’aurais également pu recourir au web scraping (sur des sites comme LeBonCoin ou SeLoger), mais j’ai préféré une base déjà structurée pour me concentrer sur l’analyse et la modélisation.
     </li>
 
     <li><strong>Exploration et Prétraitement des Données</strong>
       <ul>
-        <li>🔍 <strong>Analyse exploratoire (EDA)</strong> : statistiques descriptives, histogrammes, boxplots, heatmaps de corrélation.</li>
-        <li>🧹 <strong>Nettoyage</strong> : suppression/imputation des valeurs manquantes, élimination des doublons, vérification de la cohérence des données.</li>
-        <li>🔧 <strong>Transformation</strong> :
+        <li><strong>Analyse exploratoire (EDA)</strong> : j’ai utilisé des statistiques descriptives et des visualisations (histogrammes, boxplots, heatmap de corrélation) pour mieux comprendre la distribution des variables et identifier les relations avec le prix.</li>
+        <li><strong>Nettoyage des données</strong> : j’ai supprimé ou imputé les valeurs manquantes, éliminé les doublons et vérifié la cohérence des données.</li>
+        <li><strong>Transformation des variables</strong> :
           <ul>
-            <li>Encodage des variables catégorielles (OneHotEncoder)</li>
-            <li>Standardisation/normalisation des variables numériques</li>
-            <li>Création de variables dérivées comme le prix au m² et l’âge du bâtiment</li>
+            <li>J’ai encodé les variables catégorielles (comme la localisation) avec <code>OneHotEncoder</code>.</li>
+            <li>J’ai standardisé et normalisé les variables numériques pour les modèles sensibles à l’échelle (comme KNN).</li>
+            <li>J’ai également créé de nouvelles variables comme le prix au m² ou l’âge du bâtiment.</li>
           </ul>
         </li>
       </ul>
@@ -87,43 +90,43 @@
 
     <li><strong>Modélisation avec le Machine Learning</strong>
       <ul>
-        <li><strong>Séparation des données</strong> : 80 % pour l'entraînement, 20 % pour le test.</li>
-        <li><strong>Entraînement de plusieurs modèles</strong> :
+        <li>J’ai divisé le dataset en deux parties : 80 % pour l'entraînement et 20 % pour les tests.</li>
+        <li>J’ai entraîné plusieurs modèles de régression afin de comparer leurs performances :
           <ul>
-            <li>Régression linéaire</li>
+            <li>Régression Linéaire</li>
             <li>K-Nearest Neighbors (KNN)</li>
             <li>Random Forest Regressor</li>
-            <li>Gradient Boosting (XGBoost, LightGBM)</li>
+            <li>Gradient Boosting (XGBoost et LightGBM)</li>
           </ul>
         </li>
-        <li><strong>Évaluation</strong> des modèles via :
+        <li>Pour les évaluer, j’ai utilisé les métriques suivantes :
           <ul>
             <li>MAE (Mean Absolute Error)</li>
             <li>RMSE (Root Mean Squared Error)</li>
             <li>R² (coefficient de détermination)</li>
-            <li>Graphes : prédictions vs valeurs réelles</li>
+            <li>Et des graphes de prédiction vs valeurs réelles</li>
           </ul>
         </li>
       </ul>
     </li>
 
-    <li><strong>Optimisation des Modèles</strong>
+    <li><strong>Optimisation des modèles</strong>
       <ul>
-        <li>Recherche d’hyperparamètres (GridSearchCV, RandomizedSearchCV)</li>
-        <li>Sélection des variables les plus importantes (feature selection)</li>
+        <li>J’ai optimisé les hyperparamètres grâce à <code>GridSearchCV</code> et <code>RandomizedSearchCV</code>.</li>
+        <li>J’ai effectué une sélection des variables les plus importantes pour simplifier les modèles et éviter l’overfitting.</li>
       </ul>
     </li>
 
-    <li><strong>Visualisation et Interprétation</strong>
+    <li><strong>Visualisation et interprétation</strong>
       <ul>
-        <li>Heatmap de corrélation</li>
-        <li>Importance des variables dans Random Forest et XGBoost</li>
-        <li>Courbes d’apprentissage pour détecter overfitting/sous-apprentissage</li>
+        <li>J’ai affiché une heatmap de corrélation pour visualiser les dépendances entre variables.</li>
+        <li>J’ai analysé l’importance des variables dans les modèles basés sur les arbres (Random Forest, XGBoost).</li>
+        <li>J’ai utilisé des courbes d’apprentissage pour détecter d’éventuels problèmes de sous-apprentissage ou sur-apprentissage.</li>
       </ul>
     </li>
   </ol>
 
-  <p><strong>Outils & Bibliothèques :</strong></p>
+  <p><strong>Outils & Bibliothèques utilisés :</strong></p>
   <ul>
     <li><strong>Langage :</strong> Python 3.x</li>
     <li><strong>Analyse de données :</strong>
@@ -136,13 +139,13 @@
       <ul>
         <li><code>matplotlib</code></li>
         <li><code>seaborn</code></li>
-        <li><code>plotly</code> (optionnel, pour les graphiques interactifs)</li>
+        <li><code>plotly</code> (pour les visualisations interactives)</li>
       </ul>
     </li>
     <li><strong>Machine Learning :</strong>
       <ul>
-        <li><code>scikit-learn</code> : régression, KNN, Random Forest, métriques</li>
-        <li><code>xgboost</code> ou <code>lightgbm</code> : gradient boosting</li>
+        <li><code>scikit-learn</code> : régression, KNN, Random Forest, métriques d’évaluation</li>
+        <li><code>xgboost</code> et <code>lightgbm</code> : Gradient Boosting</li>
       </ul>
     </li>
     <li><strong>Optimisation :</strong>
@@ -153,25 +156,7 @@
   </ul>
 </section>
 
-  <section class="project">
-  <h2>Développement d'une application carbone</h2>
-  <p>
-    <strong>Contexte :</strong> Développement d’un outil innovant dans Revit pour estimer l’empreinte carbone des projets architecturaux dès les phases d’études préliminaires et d’avant-projet.  
-    Cet outil permet de calculer une estimation globale du bilan carbone à partir des données disponibles dans le modèle Revit.  
-    Il aide les décideurs à comprendre rapidement l’impact environnemental potentiel de leurs constructions et à prendre des décisions plus durables.
-  </p>
 
-  <p>
-    L’outil a été conçu pour être facilement intégrable et simple d’utilisation. Il permet également de générer des rapports automatisés ainsi que des vues 3D colorées pour visualiser l’impact carbone de chaque composant du bâtiment.  
-    j'ai  joué un rôle clé dans son développement, notamment dans la programmation en Python et l’intégration technique avec Revit.  
-    Grâce à ma contribution, l’outil sera déployé chez AREP à l’été 2025.
-  </p>
-
-  <p><strong>Tâches effectuées :</strong> Développement d’une application sur Revit (Python/C#), génération automatique du calcul d’empreinte carbone, visualisation interactive avec Dash & Power BI, assistance à la prise de décision écologique.</p>
-
-  <p><strong>Outils :</strong> Python, Revit, C#, Dash, Power BI, Git, GitHub.</p>
-
-</section>
   
     <section class="project">
     <h2>Calcul de la performance commerciale, analyse de données et visualisation avec Power BI</h2>
@@ -400,6 +385,25 @@
   <p><strong>Outils :</strong> Python, OpenAI API, Streamlit</p>
 </section>
 
+  <section class="project">
+  <h2>Développement d'une application carbone</h2>
+  <p>
+    <strong>Contexte :</strong> Développement d’un outil innovant dans Revit pour estimer l’empreinte carbone des projets architecturaux dès les phases d’études préliminaires et d’avant-projet.  
+    Cet outil permet de calculer une estimation globale du bilan carbone à partir des données disponibles dans le modèle Revit.  
+    Il aide les décideurs à comprendre rapidement l’impact environnemental potentiel de leurs constructions et à prendre des décisions plus durables.
+  </p>
+
+  <p>
+    L’outil a été conçu pour être facilement intégrable et simple d’utilisation. Il permet également de générer des rapports automatisés ainsi que des vues 3D colorées pour visualiser l’impact carbone de chaque composant du bâtiment.  
+    j'ai  joué un rôle clé dans son développement, notamment dans la programmation en Python et l’intégration technique avec Revit.  
+    Grâce à ma contribution, l’outil sera déployé chez AREP à l’été 2025.
+  </p>
+
+  <p><strong>Tâches effectuées :</strong> Développement d’une application sur Revit (Python/C#), génération automatique du calcul d’empreinte carbone, visualisation interactive avec Dash & Power BI, assistance à la prise de décision écologique.</p>
+
+  <p><strong>Outils :</strong> Python, Revit, C#, Dash, Power BI, Git, GitHub.</p>
+
+</section>
 
 
 
