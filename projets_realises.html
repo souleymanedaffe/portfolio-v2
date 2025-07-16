@@ -93,7 +93,27 @@
   <p><strong>Outils :</strong> Python, requests, BeautifulSoup, pandas, matplotlib, seaborn (utilisés dans un Jupyter Notebook).</p>
 </section>
 
-      <section class="project">
+     <section class="project">
+  <h2>Extraction de données depuis des documents PDF</h2>
+
+  <p><strong>Contexte :</strong>  
+  L’objectif était de collecter des données à partir de documents PDF (avec ou sans couche texte), d’extraire automatiquement des informations clés et de les structurer dans un fichier CSV contenant les colonnes suivantes :  
+  <code>"enterprise_name", "raison_d_etre", "objectifs_sociaux", "objectifs_environnementaux", "mission_nature"</code>.  
+  Le projet s’appuie sur des techniques d’OCR, de traitement de texte et d’intelligence artificielle (modèle OpenAI GPT).</p>
+
+  <p><strong>Tâches effectuées :</strong>  
+    - Identification des PDF contenant une couche texte ou non à l’aide de <code>pdfplumber</code> ;<br>
+    - Utilisation de <code>pdfplumber</code> pour les PDF textuels, et de <code>pytesseract</code> pour l’OCR des PDF scannés ;<br>
+    - Développement d’une fonction de découpage du texte en fragments pour respecter les limites de tokens des modèles IA ;<br>
+    - Création d’un système de requêtes structurées vers le modèle GPT pour extraire des informations spécifiques (nom d’entreprise, raison d’être, missions RSE, etc.) ;<br>
+    - Implémentation d’une logique d’agrégation des résultats issus de plusieurs pages (chunks) ;<br>
+    - Traitement automatisé d’un dossier complet de PDF, avec sauvegarde des résultats dans un fichier CSV ;<br>
+    - Gestion des erreurs, vérification des réponses de l’API, gestion des cas d’échec avec fallback JSON sécurisé.</p>
+
+  <p><strong>Outils :</strong> Python, pdfplumber, pytesseract, OpenAI API, CSV, JSON</p>
+</section>
+
+  <section class="project">
   <h2>Analyse des Risques d'Obésité dans les Populations du Mexique, du Pérou et de la Colombie : Application de l'Intelligence Artificielle aux Habitudes Alimentaires et à la Condition Physique</h2>
   
   <p><strong>Contexte :</strong><br>
@@ -265,25 +285,7 @@
 </section>
 
 
-  <section class="project">
-  <h2>Extraction de données depuis des documents PDF</h2>
 
-  <p><strong>Contexte :</strong>  
-  L’objectif était de collecter des données à partir de documents PDF (avec ou sans couche texte), d’extraire automatiquement des informations clés et de les structurer dans un fichier CSV contenant les colonnes suivantes :  
-  <code>"enterprise_name", "raison_d_etre", "objectifs_sociaux", "objectifs_environnementaux", "mission_nature"</code>.  
-  Le projet s’appuie sur des techniques d’OCR, de traitement de texte et d’intelligence artificielle (modèle OpenAI GPT).</p>
-
-  <p><strong>Tâches effectuées :</strong>  
-    - Identification des PDF contenant une couche texte ou non à l’aide de <code>pdfplumber</code> ;<br>
-    - Utilisation de <code>pdfplumber</code> pour les PDF textuels, et de <code>pytesseract</code> pour l’OCR des PDF scannés ;<br>
-    - Développement d’une fonction de découpage du texte en fragments pour respecter les limites de tokens des modèles IA ;<br>
-    - Création d’un système de requêtes structurées vers le modèle GPT pour extraire des informations spécifiques (nom d’entreprise, raison d’être, missions RSE, etc.) ;<br>
-    - Implémentation d’une logique d’agrégation des résultats issus de plusieurs pages (chunks) ;<br>
-    - Traitement automatisé d’un dossier complet de PDF, avec sauvegarde des résultats dans un fichier CSV ;<br>
-    - Gestion des erreurs, vérification des réponses de l’API, gestion des cas d’échec avec fallback JSON sécurisé.</p>
-
-  <p><strong>Outils :</strong> Python, pdfplumber, pytesseract, OpenAI API, CSV, JSON</p>
-</section>
 
   <section class="project">
   <h2>Développement d'une application carbone</h2>
